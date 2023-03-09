@@ -1,0 +1,40 @@
+AWS Organizations is an account management service, which allows to manage multiple AWS accounts centrally.
+
+AWS Organizations helps you to:
+*. Centrally manage billing
+*. Control access
+*. Compliance
+*. Security
+*. Share resources across your AWS accounts.
+
+
+AWS Organizations Use Cases.
+*. Group multiple AWS accounts.
+*. Get consolidated billing of multiple AWS Accounts and simplify cost reporting.
+*. Get cost visibility with single payer account.
+*. Limit AWS service access with SCPs.
+*. Apply common policies to multiple AWS accounts (or entire organization).
+*. Easy compliance across multiple AWS accounts.
+
+AWS Organization Components
+
+Master Account
+- A master account is the AWS account you use to create your organization.
+- This can be an account designated for managing AWS accounts. It is the central managemnet and governance hub.
+- Using master account, you can create other accounts in your organization and invite other accounts to join your organization, and remove accounts from your organization.
+- There is only one master/root account.
+
+Master Account
+- A member account is an AWS account, other than the master account in the organization.
+- New AWS account can be directly added to the organization.
+- Existing AWS account can be added (invited) to the Organization. Root user of account should accept invitation.
+
+Organization Unit (OU)
+- An organization unit is a group of AWS accounts within an organization.
+- An OU can also contain other UOs enabling you to create a hierarchy. This enables you to reflect organizational structure.
+- An account can be added under single UO. One account cannot be added under two different OUs.
+- Hierarchy can be five levels deep including root and AWS accounts created in the lowest OUs.
+
+Service Control Policy
+- SCP is a document that describes controls to be attached to the entire organization, OUs, or individual AWS accounts.
+- Policy defines the services and actions that users or a role can perform. 
